@@ -2,14 +2,324 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Machine Learning Workshop</title>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebecca Raich | Machine Learning & Creative Technology</title>
+    <meta name="description" content="Personal portfolio and workshop hub by Rebecca Raich. Exploring the intersection of machine learning, creative technology, and modern digital design." />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="images/Artboard 1.png" alt="Girl in a jacket" width="500" height="500">
+    <!-- Ambient Background Sunset Glows -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-center-right"></div>
+    <div class="ambient-glow glow-bottom-left"></div>
 
-    <!-- <script defer src="scripts/lightswitch.js"></script>-->
+    <!-- Navigation Bar -->
+    <header class="site-nav">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <div class="nav-logo-icon">R</div>
+          <span>Rebecca Raich</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
+            <span id="theme-icon">
+              <!-- Sun / Moon SVG rendered via script.js -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+
+          <a href="#contact" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.88rem;">Let's Talk</a>
+
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="section-tag">Machine Learning & Creative Tech</div>
+            <h1>
+              Exploring the Frontiers of <span class="gradient-text">Intelligent Design</span> & Code
+            </h1>
+            <p class="hero-description">
+              Welcome to my digital space. I build creative technology projects, explore machine learning workflows, and host hands-on workshops bridging data, code, and visual art.
+            </p>
+            <div class="hero-buttons">
+              <a href="#workshops" class="btn btn-primary">
+                <span>Explore Workshops</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3>Hands-On</h3>
+                <p>Interactive Code</p>
+              </div>
+              <div class="stat-item">
+                <h3>ML & AI</h3>
+                <p>Creative Applications</p>
+              </div>
+              <div class="stat-item">
+                <h3>Design</h3>
+                <p>Modern Systems</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Showcase -->
+          <div class="hero-showcase">
+            <div class="hero-card-glow"></div>
+            <div class="hero-card-frame">
+              <div class="hero-card-image-wrap" style="padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                <!-- Crying with Laughter Face SVG -->
+                <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 220px; filter: drop-shadow(0 10px 25px rgba(255, 94, 30, 0.3));">
+                  <defs>
+                    <radialGradient id="faceGrad" cx="50%" cy="40%" r="50%">
+                      <stop offset="0%" stop-color="#FFDE43"/>
+                      <stop offset="70%" stop-color="#FF9D00"/>
+                      <stop offset="100%" stop-color="#FF5E1E"/>
+                    </radialGradient>
+                    <linearGradient id="tearGradL" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#68E1FD"/>
+                      <stop offset="100%" stop-color="#0088FF"/>
+                    </linearGradient>
+                    <linearGradient id="tearGradR" x1="1" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#68E1FD"/>
+                      <stop offset="100%" stop-color="#0088FF"/>
+                    </linearGradient>
+                    <linearGradient id="mouthGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#680E1C"/>
+                      <stop offset="100%" stop-color="#A5152A"/>
+                    </linearGradient>
+                    <filter id="tearGlow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0088FF" flood-opacity="0.5"/>
+                    </filter>
+                  </defs>
+
+                  <!-- Head Base -->
+                  <circle cx="50" cy="50" r="42" fill="url(#faceGrad)"/>
+
+                  <!-- Cheeks Blush -->
+                  <ellipse cx="26" cy="58" rx="7" ry="4" fill="#FF2A7A" opacity="0.35"/>
+                  <ellipse cx="74" cy="58" rx="7" ry="4" fill="#FF2A7A" opacity="0.35"/>
+
+                  <!-- Eyebrows (laughing tilt) -->
+                  <path d="M26 31 C29 27, 39 28, 43 33" stroke="#682900" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <path d="M74 31 C71 27, 61 28, 57 33" stroke="#682900" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+                  <!-- Laughing Closed Eyes -->
+                  <path d="M26 43 Q35 34 44 43" stroke="#4A1E00" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+                  <path d="M74 43 Q65 34 56 43" stroke="#4A1E00" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+
+                  <!-- Tears of Joy -->
+                  <path d="M24 43 C14 43, 6 56, 12 66 C17 74, 28 72, 28 60 C28 52, 27 46, 24 43 Z" fill="url(#tearGradL)" filter="url(#tearGlow)"/>
+                  <ellipse cx="16" cy="58" rx="3.5" ry="6" fill="#FFFFFF" opacity="0.6" transform="rotate(-15 16 58)"/>
+
+                  <path d="M76 43 C86 43, 94 56, 88 66 C83 74, 72 72, 72 60 C72 52, 73 46, 76 43 Z" fill="url(#tearGradR)" filter="url(#tearGlow)"/>
+                  <ellipse cx="84" cy="58" rx="3.5" ry="6" fill="#FFFFFF" opacity="0.6" transform="rotate(15 84 58)"/>
+
+                  <!-- Big Laughing Open Mouth -->
+                  <path d="M30 54 Q50 50 70 54 C70 76, 30 76, 30 54 Z" fill="url(#mouthGrad)"/>
+
+                  <!-- Teeth -->
+                  <path d="M32 54.5 Q50 51 68 54.5 C66 61, 34 61, 32 54.5 Z" fill="#FFFFFF"/>
+
+                  <!-- Tongue -->
+                  <path d="M40 70 Q50 63 60 70 C57 76, 43 76, 40 70 Z" fill="#FF5277"/>
+
+                  <!-- Mouth Outline -->
+                  <path d="M30 54 Q50 50 70 54 C70 76, 30 76, 30 54 Z" stroke="#4A1E00" stroke-width="2.5" fill="none"/>
+                </svg>
+              </div>
+              <div class="hero-card-caption">
+                <div class="hero-caption-title">Crying with Laughter 😂</div>
+                <div class="hero-caption-tag">Mood</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workshops & Focus Areas -->
+      <section class="workshops-section" id="workshops">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">What I Do</div>
+            <h2>Workshops & <span class="gradient-text">Focus Areas</span></h2>
+            <p>From practical machine learning concepts to generative design, here is what I focus on and teach.</p>
+          </div>
+
+          <div class="grid-3">
+            <!-- Card 1 -->
+            <div class="glass-card">
+              <div class="card-icon">🧠</div>
+              <h3 class="card-title">Machine Learning Foundations</h3>
+              <p class="card-desc">
+                Demystifying core machine learning concepts, data preprocessing, and model training with approachable, hands-on examples and real-world experiments.
+              </p>
+              <div class="card-tags">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Supervised Learning</span>
+                <span class="tag-pill">Data Visualization</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card">
+              <div class="card-icon">✨</div>
+              <h3 class="card-title">Generative AI & Creativity</h3>
+              <p class="card-desc">
+                Investigating how neural models can augment human creativity. Crafting interactive visual pipelines, latent space navigation, and AI-assisted art.
+              </p>
+              <div class="card-tags">
+                <span class="tag-pill">Neural Nets</span>
+                <span class="tag-pill">Generative Art</span>
+                <span class="tag-pill">Creative Coding</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card">
+              <div class="card-icon">⚡</div>
+              <h3 class="card-title">Modern Web & UI Design</h3>
+              <p class="card-desc">
+                Building responsive, vibrant digital experiences with modern web technologies, smooth micro-animations, accessible glassmorphism, and bold aesthetics.
+              </p>
+              <div class="card-tags">
+                <span class="tag-pill">HTML5 / CSS3</span>
+                <span class="tag-pill">UI/UX Design</span>
+                <span class="tag-pill">Interactions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-text">
+            <div class="section-tag">About Me</div>
+            <h2>Fusing Curiosity with <span class="gradient-text">Creative Engineering</span></h2>
+            <p>
+              I am passionate about breaking down complex technical subjects into engaging, visually captivating learning experiences. Whether developing machine learning experiments or designing sleek user interfaces, I love crafting solutions that are both technically rigorous and aesthetic.
+            </p>
+            <p>
+              Through workshops and interactive projects, I empower creators and learners to understand modern AI tools and incorporate them seamlessly into their creative toolkits.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>Hands-on Workshops</h4>
+                <p>Interactive sessions tailored for beginners and enthusiasts.</p>
+              </div>
+              <div class="highlight-box">
+                <h4>Visual Craft</h4>
+                <p>Bringing vibrant pink and orange color schemes and clean typography to life.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Light Switch Demo Card -->
+          <div class="interactive-feature">
+            <div class="section-tag">Interactive Feature</div>
+            <h3 style="margin-bottom: 0.75rem;">Ambient Light Switch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Click the glowing sunset orb below to toggle between dark obsidian and bright sunrise themes.
+            </p>
+
+            <div class="interactive-preview" id="lightswitch-demo" title="Click to switch theme ambience!">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                <circle cx="12" cy="12" r="5"/>
+              </svg>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-dim);">
+              Tip: Your theme preference is automatically remembered for future visits!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / CTA Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <h2>Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+            <p>
+              Have a question about upcoming workshops, want to collaborate on a machine learning project, or just want to say hi? I'd love to connect!
+            </p>
+            <div class="contact-links">
+              <a href="https://github.com/rebeccaraich" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Profile</span>
+              </a>
+              <a href="mailto:rebeccaraich@example.com" class="btn btn-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>Send an Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Rebecca Raich. Designed with vibrant sunset aesthetics.</p>
+        <div class="footer-links">
+          <a href="#home">Back to Top ↑</a>
+          <a href="https://github.com/rebeccaraich/Rebecca" target="_blank" rel="noopener noreferrer">Repository</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script defer src="script.js"></script>
   </body>
 </html>
