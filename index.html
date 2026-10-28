@@ -6,19 +6,20 @@
     <title>Rebecca Raich | Semester Course Portfolio</title>
     <meta name="description" content="Coursework and project portfolio by Rebecca Raich. Showcasing 4 semester projects in creative media, digital collage, and technology." />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Editorial Serif + Clean Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Model Viewer (3D WebGL / AR) -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   </head>
   <body>
-    <!-- Ambient Background Sunset Glows -->
-    <div class="ambient-glow glow-top-left"></div>
-    <div class="ambient-glow glow-center-right"></div>
-    <div class="ambient-glow glow-bottom-left"></div>
+    <!-- Ambient Falling Feathers & Sparkles Background Canvas -->
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
 
     <!-- Navigaion Bar -->
     <header class="site-nav">
@@ -71,12 +72,12 @@
       <section class="hero-section" id="home">
         <div class="container hero-grid">
           <div class="hero-content">
-            <div class="section-tag">Semester Coursework &bull; 2026</div>
+            <div class="section-tag">Semester Portfolio &bull; Fall 2026</div>
             <h1>
-              Digital Media &amp; <span class="gradient-text">Semester Projects</span>
+              Digital Media &amp; <span class="gradient-text"><em>Semester Projects</em></span>
             </h1>
             <p class="hero-description">
-              Welcome to my class portfolio. Explore my 4 milestone projects developed throughout the semester, featuring digital collage, visual concept art, and creative media experimentation.
+              Welcome to my coursework portfolio. Explore my 4 milestone projects developed throughout the semester, featuring digital collage, visual concept art, and creative media experimentation.
             </p>
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary">
@@ -108,12 +109,12 @@
           <div class="hero-showcase">
             <div class="hero-card-glow"></div>
             <div class="hero-card-frame">
-              <a href="#projects" class="hero-card-image-wrap" title="Jump to Project 1: Uncanny Valley" style="display: block; text-decoration: none;">
-                <img src="images/raichfinal1.png" alt="Featured Project: Uncanny Valley" style="width: 100%; height: 100%; object-fit: cover;" />
+              <a href="#projects" class="hero-card-image-wrap" title="Jump to Project 1: Uncanny Valley / Alice" style="display: block; text-decoration: none;">
+                <img src="images/raichfinal1.png" alt="Featured Project: Uncanny Valley / Alice" style="width: 100%; height: 100%; object-fit: cover;" />
               </a>
               <div class="hero-card-caption">
-                <div class="hero-caption-title">Project 01: Uncanny Valley</div>
-                <div class="hero-caption-tag">Completed</div>
+                <div class="hero-caption-title">Project 01: Uncanny Valley / Alice</div>
+                <div class="hero-caption-tag">Artwork &bull; PDF Booklet</div>
               </div>
             </div>
           </div>
@@ -125,12 +126,12 @@
         <div class="container">
           <div class="section-header">
             <div class="section-tag">Coursework Showcase</div>
-            <h2>Semester <span class="gradient-text">Projects</span></h2>
+            <h2>Semester <span class="gradient-text"><em>Projects</em></span></h2>
             <p>A curated showcase of 4 class projects this semester. Project 1 is completed and displayed below; remaining slots are reserved for upcoming work.</p>
           </div>
 
           <div class="projects-grid">
-            <!-- Project 1: Uncanny Valley (Completed) -->
+            <!-- Project 1: Uncanny Valley / Alice (Completed) -->
             <article class="project-card project-card-featured" id="project-1-card">
               <div class="project-badge-bar">
                 <span class="project-status-pill status-done">
@@ -138,8 +139,8 @@
                 </span>
                 <span class="project-num">01 / 04</span>
               </div>
-              <div class="project-img-box" id="project-1-preview" role="button" tabindex="0" title="Click to enlarge image">
-                <img src="images/raichfinal1.png" alt="Project 1: Uncanny Valley - Final Artwork" class="project-img" />
+              <div class="project-img-box" id="project-1-preview" role="button" tabindex="0" title="Click to enlarge artwork image">
+                <img src="images/raichfinal1.png" alt="Project 1: Uncanny Valley / Alice - Final Artwork" class="project-img" />
                 <div class="project-image-overlay">
                   <span class="overlay-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -153,54 +154,158 @@
                 </div>
               </div>
               <div class="project-body">
-                <h3 class="project-title">Uncanny Valley</h3>
+                <h3 class="project-title">Uncanny Valley / Alice</h3>
                 <p class="project-summary">
-                  Final coursework submission exploring surrealism and the uncanny valley. Blends whimsical and unsettling Alice in Wonderland aesthetics into a contemporary <em>&ldquo;Alice: Nootropic Chocolate&rdquo;</em> packaging concept with intricate photo manipulations, neon glow lighting, and character compositions.
+                  Coursework submission exploring surrealism and the uncanny valley through an imaginative reimagining of <em>Alice in Wonderland</em>. Features a modern packaging concept for <em>&ldquo;Alice: Nootropic Chocolate&rdquo;</em> set against a glowing neon <em>&ldquo;love is the drug&rdquo;</em> backdrop, combining character photo manipulations of the Cheshire Cat kitten, White Rabbit, caterpillar on mushrooms, and vintage typography.
                 </p>
+
+                <!-- Project PDF Presentation Document Callout -->
+                <div class="project-doc-callout">
+                  <div class="doc-header-row">
+                    <div class="doc-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                    </div>
+                    <div class="doc-info-text">
+                      <div class="doc-badge-row">
+                        <span class="doc-title">Project Presentation Booklet</span>
+                        <span class="doc-tag">4-Page PDF</span>
+                      </div>
+                      <p class="doc-desc">Concept proposal, reference moodboards, iterative drafts &amp; final design.</p>
+                    </div>
+                  </div>
+                  <div class="doc-actions">
+                    <button type="button" class="btn btn-secondary doc-btn" id="btn-preview-pdf" title="View PDF directly in website">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                      <span>Preview PDF</span>
+                    </button>
+                    <a href="images/indesignalicefinal.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary doc-btn" title="Open PDF in new tab">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      <span>Open Tab</span>
+                    </a>
+                  </div>
+                </div>
+
                 <div class="project-meta">
                   <div class="card-tags">
                     <span class="tag-pill">Digital Collage</span>
-                    <span class="tag-pill">Photoshop</span>
+                    <span class="tag-pill">Photoshop &amp; InDesign</span>
                     <span class="tag-pill">Packaging Concept</span>
                     <span class="tag-pill">Surrealism</span>
                   </div>
-                  <button type="button" class="btn btn-secondary project-view-btn" id="btn-expand-1">
-                    <span>Enlarge Artwork</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-                    </svg>
-                  </button>
+                  <div class="project-action-buttons">
+                    <button type="button" class="btn btn-secondary project-view-btn" id="btn-expand-1">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      <span>Enlarge Artwork</span>
+                    </button>
+                    <button type="button" class="btn btn-primary project-view-btn" id="btn-pdf-hero">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                      </svg>
+                      <span>View Project PDF</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </article>
 
-            <!-- Project 2: Blank / Placeholder -->
-            <article class="project-card project-card-placeholder" id="project-2">
+            <!-- Project 2: Quasi-Object (3D Model Viewer) -->
+            <article class="project-card project-card-featured" id="project-2">
               <div class="project-badge-bar">
-                <span class="project-status-pill status-pending">
-                  <span class="status-dot"></span> Project 02 &bull; Coming Soon
+                <span class="project-status-pill status-in-progress">
+                  <span class="status-dot"></span> Project 02 &bull; In Progress
                 </span>
                 <span class="project-num">02 / 04</span>
               </div>
-              <div class="project-empty-canvas">
-                <div class="empty-icon-wrap">
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                    <rect x="3" y="3" width="18" height="18" rx="4" ry="4"></rect>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                  </svg>
+
+              <!-- 3D Model Viewer Section -->
+              <section class="model-container">
+                <div class="model-header-bar">
+                  <h2 class="model-heading">3D Artifact Study</h2>
+                  <span class="model-badge-interactive">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    Interactive 3D / AR
+                  </span>
                 </div>
-                <h4>Project 02</h4>
-                <p>Blank slot &bull; In progress</p>
-              </div>
+
+                <model-viewer 
+                  id="project-2-viewer"
+                  src="models/cubeuv demo.glb" 
+                  poster="images/cubedemoskins-poster.png" 
+                  alt="A 3D model of a creative artifact - Project 2 Quasi-Object" 
+                  shadow-intensity="1" 
+                  camera-controls 
+                  auto-rotate 
+                  ar
+                  touch-action="pan-y">
+                </model-viewer>
+
+                <div class="model-interaction-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"></path>
+                    <polyline points="21 3 21 8 16 8"></polyline>
+                  </svg>
+                  <span>Drag to rotate &bull; Scroll to zoom &bull; AR on mobile</span>
+                </div>
+              </section>
+
               <div class="project-body">
-                <h3 class="project-title text-muted">Project 02</h3>
-                <p class="project-summary text-muted">
-                  This project slot is reserved for the upcoming semester assignment. Artwork, descriptions, and process documentation will be displayed here once finalized.
+                <div class="project-title-row">
+                  <h3 class="project-title">Quasi-Object</h3>
+                  <span class="project-due-tag">Due Wed Nov 11, 2026 &bull; 11:59pm</span>
+                </div>
+                <p class="project-summary">
+                  Coursework project exploring three-dimensional form, UV unwrapping, and spatial perception for the <em>Quasi-Object</em> study. Real-time WebGL interactive 3D placeholder featuring multi-surface textural mapping (skins, foliage, sky, and typography) with Augmented Reality (AR) viewing support.
                 </p>
+
                 <div class="project-meta">
                   <div class="card-tags">
-                    <span class="tag-pill tag-placeholder">Pending Milestone</span>
+                    <span class="tag-pill">3D Model</span>
+                    <span class="tag-pill">Quasi-Object</span>
+                    <span class="tag-pill">Blender &amp; GLTF</span>
+                    <span class="tag-pill">&lt;model-viewer&gt;</span>
+                    <span class="tag-pill">WebGL / AR</span>
+                  </div>
+                  <div class="project-action-buttons">
+                    <button type="button" class="btn btn-secondary project-view-btn" id="btn-reset-camera-2" title="Reset 3D camera to initial angle">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                        <polyline points="3 3 3 8 8 8"></polyline>
+                      </svg>
+                      <span>Reset Camera</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary project-view-btn" id="btn-toggle-rotate-2" title="Toggle 3D auto rotation">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="10" y1="15" x2="10" y2="9"></line>
+                        <line x1="14" y1="15" x2="14" y2="9"></line>
+                      </svg>
+                      <span id="rotate-label-2">Pause Spin</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -278,12 +383,12 @@
         <div class="container about-grid">
           <div class="about-text">
             <div class="section-tag">About Me</div>
-            <h2>Fusing Curiosity with <span class="gradient-text">Creative Engineering</span></h2>
+            <h2>Fusing Curiosity with <span class="gradient-text"><em>Creative Vision</em></span></h2>
             <p>
-              I am passionate about breaking down complex technical subjects into engaging, visually captivating learning experiences. Whether developing machine learning experiments or designing sleek user interfaces, I love crafting solutions that are both technically rigorous and aesthetic.
+              I am passionate about breaking down complex technical subjects into engaging, visually captivating learning experiences. Whether developing digital media experiments or designing sleek user interfaces, I love crafting solutions that are both technically rigorous and aesthetic.
             </p>
             <p>
-              Through workshops and interactive projects, I empower creators and learners to understand modern AI tools and incorporate them seamlessly into their creative toolkits.
+              Through workshops and interactive projects, I empower creators and learners to understand modern creative tools and incorporate them seamlessly into their work.
             </p>
 
             <div class="about-highlights">
@@ -293,17 +398,17 @@
               </div>
               <div class="highlight-box">
                 <h4>Visual Craft</h4>
-                <p>Bringing vibrant pink and orange color schemes and clean typography to life.</p>
+                <p>Refined typography, delicate tactile textures, and quiet minimal aesthetics.</p>
               </div>
             </div>
           </div>
 
-          <!-- Interactive Light Switch Demo Card -->
+          <!-- Interactive Ambient Mood Switch Card -->
           <div class="interactive-feature">
             <div class="section-tag">Interactive Feature</div>
-            <h3 style="margin-bottom: 0.75rem;">Ambient Light Switch</h3>
+            <h3 style="margin-bottom: 0.75rem;">Ambient Mood Switch</h3>
             <p style="color: var(--text-muted); font-size: 0.95rem;">
-              Click the glowing sunset orb below to toggle between dark obsidian and bright sunrise themes.
+              Click the delicate orb below to toggle between ethereal morning white and serene twilight pearl.
             </p>
 
             <div class="interactive-preview" id="lightswitch-demo" title="Click to switch theme ambience!">
@@ -324,7 +429,7 @@
       <section class="contact-section" id="contact">
         <div class="container">
           <div class="contact-card">
-            <h2>Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+            <h2>Let's Build Something <span class="gradient-text"><em>Extraordinary</em></span></h2>
             <p>
               Have a question about upcoming workshops, want to collaborate on a machine learning project, or just want to say hi? I'd love to connect!
             </p>
@@ -348,22 +453,31 @@
       </section>
     </main>
 
-    <!-- Project 1 Lightbox Modal -->
+    <!-- Project 1 Lightbox Modal (Artwork Image) -->
     <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="lightbox-overlay" id="lightbox-overlay"></div>
       <div class="lightbox-dialog">
         <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">&times;</button>
         <div class="lightbox-image-wrap">
-          <img src="images/raichfinal1.png" alt="Project 1: Uncanny Valley - High Resolution" id="lightbox-img" />
+          <img src="images/raichfinal1.png" alt="Project 1: Uncanny Valley / Alice - High Resolution Artwork" id="lightbox-img" />
         </div>
         <div class="lightbox-footer">
           <div class="lightbox-caption">
-            <h3 id="modal-title">Project 01 &bull; Uncanny Valley</h3>
+            <h3 id="modal-title">Project 01 &bull; Uncanny Valley / Alice</h3>
             <p>Digital Collage &amp; Packaging Concept &mdash; <em>Alice: Nootropic Chocolate</em></p>
           </div>
           <div class="lightbox-actions">
-            <a href="images/raichfinal1.png" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;">
-              <span>Open Original</span>
+            <button type="button" class="btn btn-secondary" id="modal-open-pdf-btn" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>View Project PDF</span>
+            </button>
+            <a href="images/raichfinal1.png" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;">
+              <span>Open Original Image</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
@@ -375,10 +489,50 @@
       </div>
     </div>
 
+    <!-- Project 1 PDF Viewer Modal -->
+    <div class="lightbox-modal pdf-modal" id="pdf-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+      <div class="lightbox-overlay" id="pdf-overlay"></div>
+      <div class="lightbox-dialog pdf-dialog">
+        <div class="pdf-modal-header">
+          <div class="pdf-header-title-wrap">
+            <h3 id="pdf-modal-title">Project 01 &bull; Proposal &amp; Process Presentation</h3>
+            <p>indesignalicefinal.pdf &bull; InDesign Multi-Page Presentation Booklet (4 Pages)</p>
+          </div>
+          <div class="pdf-header-actions">
+            <a href="images/indesignalicefinal.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pdf-ctrl-btn" title="Open PDF in a new browser tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Open in New Tab</span>
+            </a>
+            <a href="images/indesignalicefinal.pdf" download="indesignalicefinal.pdf" class="btn btn-primary pdf-ctrl-btn" title="Download PDF file">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+          <button class="lightbox-close pdf-modal-close" id="pdf-close" aria-label="Close PDF viewer">&times;</button>
+        </div>
+        <div class="pdf-viewer-wrap">
+          <iframe src="images/indesignalicefinal.pdf" class="pdf-iframe" title="InDesign Alice Final Presentation PDF"></iframe>
+        </div>
+        <div class="pdf-modal-footer">
+          <p class="pdf-notice">
+            Viewing 4 pages: Conceptual Framework &bull; Visual References &bull; Draft Iterations &bull; Final Artwork. If the PDF preview does not display inside your browser, <a href="images/indesignalicefinal.pdf" target="_blank" rel="noopener noreferrer">click here to open the PDF directly</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>&copy; 2026 Rebecca Raich. Designed with vibrant sunset aesthetics.</p>
+        <p>&copy; 2026 Rebecca Raich. Minimal portfolio with delicate feathers and sparkle accents.</p>
         <div class="footer-links">
           <a href="#home">Back to Top ↑</a>
           <a href="https://github.com/rebeccaraich/Rebecca" target="_blank" rel="noopener noreferrer">Repository</a>
